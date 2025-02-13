@@ -1,0 +1,99 @@
+/* ==== GENERAL STYLES ==== */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+/* ==== BANNER ANIMATION ==== */
+.banner {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    font-size: 22px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* ==== CARD WITH HOVER EFFECT ==== */
+.card {
+    width: 200px;
+    height: 200px;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* HOVER EFFECT - Expands and Glows */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* ==== BUTTON STYLING ==== */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #ff7e5f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+button:hover {
+    background: #feb47b;
+    transform: scale(1.05);
+}
+
+/* ==== MODAL STYLES ==== */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+/* SHOW MODAL ANIMATION */
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ==== LOADING SPINNER ANIMATION ==== */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid white;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1.5s linear infinite;
+}
+
+/* ==== ANIMATIONS ==== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
